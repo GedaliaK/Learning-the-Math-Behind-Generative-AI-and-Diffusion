@@ -235,3 +235,11 @@ You now have some of the basic tools to understand SDEs, as used in generative A
 The PDE we derived (following Einstein's lead), is a form of a Fokker-Planck equation.
 
 Hope you enjoyed!
+
+## References
+
+Some foundational papers in generative AI:
+
+- https://arxiv.org/pdf/1503.03585
+- https://arxiv.org/pdf/2006.11239
+- go find some of your own that you like : )
