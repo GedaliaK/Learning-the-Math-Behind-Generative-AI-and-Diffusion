@@ -80,6 +80,7 @@ $$  n(x, t) +\tau\frac{\partial n}{\partial t} = \int_{-\infty}^{\infty}\left(n(
 To integrate these, we can use:
 
 - the probability distribution sums/integrates to 1.
+
 $$ \int \phi(\Delta) d\Delta = 1 $$
 
 - it is symmetric, so odd integrals are zero, and even are non-zero:
