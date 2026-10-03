@@ -67,11 +67,11 @@ $$ n(x, t + \tau) = \int_{-\infty}^{\infty} n(x+\Delta, t) \phi(\Delta)d\Delta $
 
 For a small time step, we can expand the right hand side as:
 
-$$ n(x, t + \tau) \approx n(x, t) +\tau\frac{\partial n}{dt}$$
+$$ n(x, t + \tau) \approx n(x, t) +\tau\frac{\partial n}{dt} $$
 
 We can similiar do the right hand side for a small $\Delta$:
 
-$$n(x + \Delta, t) \approx n(x, t) + \Delta\frac{\partial n}{\partial x} + \frac{\Delta^2}{2}\frac{\partial^2n}{\partial x^2}$$
+$$n(x + \Delta, t) \approx n(x, t) + \Delta\frac{\partial n}{\partial x} + \frac{\Delta^2}{2}\frac{\partial^2n}{\partial x^2} $$
 
 Our equation becomes:
 
@@ -101,7 +101,7 @@ $$ \frac{\partial n}{dt} =  D\frac{\partial^2n}{\partial x^2}  $$
 
 Which is the heat equation!
 
-$$ \frac{\partial u}{\partial t} = \alpha\frac{d^2u}{dx^2}$$
+$$ \frac{\partial u}{\partial t} = \alpha\frac{d^2u}{dx^2} $$
 
 The heat equation describes how heat spreads out in a material. You can imagine adding hot water to a ceramic mug and asking how the mug heats up - the heat equation tells you this. 
 
@@ -115,9 +115,9 @@ The diffusion constant tells us something a little surprising about the movement
 
 $\tau$ is time, $\Delta^2$ is distance squared, and $\phi(\Delta)$ is unitless (just a probability distribution). So imagine our particle takes a step $\Delta$, and we want to know what time scale this takes place. Well:
 
-$$ D =\Delta^2 / \tau \sim \mathrm{distance^2} / \mathrm{time}$$
+$$ D =\Delta^2 / \tau \sim \mathrm{distance^2} / \mathrm{time} $$
 
-$$ \Delta = \sqrt{D\tau}$$
+$$ \Delta = \sqrt{D\tau} $$
 
 This means our random force happens over the time scale of the square root of our time step! So if we want to look at a first order effect in time for a random force, its second order in $\Delta$ ($\Delta^2$ gives us an effect of order $\tau$)! This also helps justify our second order expansion of the right hand side with $\Delta$ compared to first order expansion on the right hand side of $\tau$.
 
@@ -186,11 +186,11 @@ The $dt^2$ term is higher than order one so we neglect.
 The $dt\,dW$ is also higher than order $dt$, since $dW$ is of order $\sqrt{dt}$, so $dt\,dW \sim dt^{3/2}$.
 
 Leaving us with:
-$$ \braket{dx^2} = \braket{dW^2} = dt = \braket{x_{n+1}^2 - 2x_{n+1}x_n + x_n^2}$$
+$$ \braket{dx^2} = \braket{dW^2} = dt = \braket{x_{n+1}^2 - 2x_{n+1}x_n + x_n^2} $$
 
 Use $x_{n+1} = x_n - x_n dt + dW$, so:
 
-$$\braket{x_{n+1}x_n} = \braket{x_n^2 - x_n^2 dt + x_n dW}$$
+$$\braket{x_{n+1}x_n} = \braket{x_n^2 - x_n^2 dt + x_n dW} $$
 
 $x_n$ and $dW$ aren't correlated at the same time step (only with the next time step), so:
 
@@ -202,7 +202,7 @@ $$ \braket{dx^2} = dt = \braket{x_{n+1}^2} + \braket{x_n^2} - 2(1-dt)\braket{x_n
 
 In steady state the $\braket{x_{n+1}^2} = \braket{x_n^2}$, meaning the variance is not changing, so:
 
-$$ dt = 2\braket{x_{n}^2} - 2\braket{x_n^2} + dt \braket{x_n^2}$$
+$$ dt = 2\braket{x_{n}^2} - 2\braket{x_n^2} + dt \braket{x_n^2} $$
 
 Resulting in (meaning in steady state):
 
