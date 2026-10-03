@@ -80,7 +80,7 @@ $$  n(x, t) +\tau\frac{\partial n}{\partial t} = \int_{-\infty}^{\infty}\left(n(
 To integrate these, we can use:
 
 - the probability distribution sums/integrates to 1.
-$$ \int \phi(\Delta) d\Delta = 1$$
+$$ \int \phi(\Delta) d\Delta = 1 $$
 
 - it is symmetric, so odd integrals are zero, and even are non-zero:
 
@@ -186,6 +186,7 @@ The $dt^2$ term is higher than order one so we neglect.
 The $dt\,dW$ is also higher than order $dt$, since $dW$ is of order $\sqrt{dt}$, so $dt\,dW \sim dt^{3/2}$.
 
 Leaving us with:
+
 $$ \braket{dx^2} = \braket{dW^2} = dt = \braket{x_{n+1}^2 - 2x_{n+1}x_n + x_n^2} $$
 
 Use $x_{n+1} = x_n - x_n dt + dW$, so:
